@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+
+}
+
+body {
+    font-family: 'Abel', sans-serif;
+    margin: 0;
+    background: black;
+    color: white;
+
+}
+
+/*page structure */ 
+
+.pagestructure {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: minmax(100px, auto);
+    grid-template-areas:
+    "header header header header header header header header header header header header"
+    ". main main main main main main main main main main."
+    ". article article article article article article article article article article ."
+    "footer footer footer footer footer footer footer footer footer footer footer footer"; 
+}
+
+header {
+    grid-area: header;
+}
+
+main { 
+    grid-area: main; 
+
+}
+article { 
+    grid-area: article; 
+
+}
+footer { 
+    grid-area: footer; 
+
+}
+
+/*end of page structure */
+
+
+
+
+/* Navigation bar Styling */
+
+nav {
+    background-color: black;
+}
+
+.navcontainer {
+    display: flex;
+    margin: 0;
+    padding: 15px;
+    list-style: none;
+}
+
+.navcontainer a {
+    text-decoration: none;
+
+}
+
+.navcontainer {
+    justify-content: right;
+    gap: 2vh;
+    margin-top: 1vh;
+
+}
+
+
+.navitem a {
+    border-right: white solid 1px;
+    color: white;
+    font-size: 5vh;
+    padding: 1vh;
+
+}
+
+.navitem a:hover {
+    color: grey;
+}
+
+.navitem a:visited { 
+    color: darkgray;
+}
+
+/*end of navigation styling*/ 
+
+
+/* footer styling */
+
+.footerheading {
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  .footerheading h2 {
+    font-style: italic;
+  }
+  
+  
+  footer ul { 
+      list-style: none;
+      padding: 0%;
+      margin: 0;
+  }
+  
+  footer { 
+    background-color:#282828;
+    border: 1px
+  }
+  
+  .footersocial { 
+    display:flex; 
+    justify-content: center;
+    gap: 20px;
+    height: 40px;
+  }
+  .fa {
+    color: white
+  }
+
+
+.fa:hover {
+    color:blue;
+
+}
+
+@media only screen and (max-width: 1000px) {
+    .navcontainer {
+        justify-content: left;
+    }
+
+}
+
+
+/* Mobile Navigation Bar*/
+
+@media only screen and (max-width: 800px) {
+    .navcontainer {
+        flex-direction: column;
+        background-color: #404040;
+        margin: 0;
+    }
+
+
+    .navcontainer a {
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    .navcontainer a {
+        padding: 5px;
+        font-size: 18px;
+        border-right: none
+    }
+
+    .footerheading h2 { 
+        font-size: 16px;
+    }
+
+    }

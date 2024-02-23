@@ -1,0 +1,111 @@
+
+/*styling for the creation of the moving image background with the hover display element */ 
+video { 
+    max-width: 100%;
+    max-height: 100%;
+}
+video::-webkit-media-controls {
+    display: none;
+  }
+
+.video-container {
+    position: relative;
+  }
+/* styling relating to hiding the text so that it only appears when hover is activated*/
+  .video-text {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 1;
+  }
+/*stylings that activate the text */ 
+
+  .video-container:hover .video-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+ .video-text h1 {
+    color: black; 
+    height: 250px;
+    width: 450px;
+    font-size: 24px;
+    background-color: #D3D3D3; 
+    opacity: 0.8;
+    border-radius: 10px; 
+  
+
+
+  }
+
+  .mobilevideotexth1 { 
+    font-size: 40px; 
+
+  }
+  p { 
+    font-size: 24px;
+  }
+/* CSS code that hides the div that will appear when the media query is activated */ 
+
+.mobilevideotext { 
+    display: none;
+}
+
+@keyframes slideInFromBottom {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  main {
+    animation: slideInFromBottom 1s;
+  }
+
+
+/* increasing the size of the text so it looks better on screen */ 
+
+  @media only screen and (min-width: 1200px) { 
+    .video-text h1 { 
+      font-size: 30px;
+      height: 350px;
+    width: 500px;
+    }
+  }
+
+  /*styling that deactivates the deactivates and hides the hover state */ 
+
+  
+@media only screen and (max-width: 1000px) {
+    .video-container:hover .video-text {
+   pointer-events: none;
+   display:none;
+ }
+
+/*styling that activates the new text which appears on movile size screens */ 
+
+.mobilevideotext {
+    display: block;
+    padding: 10px;
+}
+.mobilevideotext h1 {
+   padding-bottom: 10px;
+}
+video {
+    padding-top: 10px;
+}
+}
+
+@media only screen and (max-width: 700px) {
+  .mobilevideotext p {
+    font-size: 20px;
+  }
+}

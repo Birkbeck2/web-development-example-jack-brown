@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="Description" content="contact me section with a contact me form. ">
+    <title id="title">Contact Me</title>
+    <link rel="stylesheet" href="globalstylesheet.css">
+    <link rel="stylesheet" href="contactme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body>
+
+    <div class="pagestructure">
+        <header>
+
+            <!-- Start of the NavBar -->
+
+            <nav>
+                <ul class="navcontainer" aria-label="navigationbar">
+                    <li class="navitem"> <a href="index.html">Home </a></li>
+                    <li class="navitem"> <a href="About.html">About </a></li>
+                    <li class="navitem"> <a href="ContactMe.html">Contact Me</a></li>
+                    <li class="navitem"> <a href="Gallery.html">Gallery</a></li>
+                </ul>
+            </nav>
+            <!-- End of the NavBar -->
+        </header>
+
+        <main>
+ <!--Grid that styles the two main grid items on the page -->
+            <div class="contactmegrid">
+                <div class="contactmetext">
+                    <h1> I am currently open for commissions</h1>
+                </div>
+                <div class=formcontainer>
+                    <div class=formchild>
+                        <form method="post" action="#">
+                            <label for="firstname">Your first name</label>
+                            <input id="firstname" name="firstname" type="text" placeholder="Write your first name">
+                            <label for="lastname"> Your last name</label>
+                            <input id="lastname" name="lastname" type="text" placeholder="Write your last name">
+                            <label for="emailaddress">Your email address</label>
+                            <input id="emailaddress" name="emailaddress" type="text">
+                            <label for="contactnumber">Your contact number</label>
+                            <input id="contactnumber" name="contactnumber" type="text">
+                            <button id="submitchange" onclick="myFunction()">Submit</button>
+
+                        </form>
+                         <!--Javascript which deactivates the form sending a submission authorisation, instead it switches the 'submit' to 'submitted with an emoji'-->
+
+                        <script>
+                            function myFunction() {
+                                document.getElementById("submitchange").innerHTML = "Submitted &#128540";
+                            }
+                            document.getElementById('submitchange').addEventListener('click', function (event) {
+                                event.preventDefault();
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+
+        <footer>
+
+            <div class="footerheading">
+                <h2>Jack Brown Designs &copy;</h2>
+            </div>
+            <ul class="footersocial">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+
+
+        </footer>
+    </div>
+</body>
+
+</html>

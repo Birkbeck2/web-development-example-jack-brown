@@ -1,0 +1,115 @@
+
+/* video styling */ 
+
+video { 
+  max-width: 100%;
+  max-height:100%; 
+  
+}
+video::-webkit-media-controls {
+    display: none;
+  }
+
+/* styling of home page title */ 
+
+.homegriditem1 h1{
+    position:relative; 
+    top: 18vh;
+    left: 3vh; 
+
+}
+
+.homegriditem1 mark{
+    background: grey;
+    color: white;
+    font-size: 60px;
+}
+
+/* styling of video */ 
+
+.homegriditem2 {
+  position: relative;
+  top: -150px;
+  z-index: -1;
+}
+
+/*footer */ 
+
+.footerheading {
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.footerheading h2 {
+  font-style: italic;
+}
+
+
+footer ul { 
+    list-style: none;
+    padding: 0%;
+    margin: 0;
+}
+
+footer { 
+  background-color:#282828;
+  border: 1px
+}
+
+.footersocial { 
+  display:flex; 
+  justify-content: center;
+  gap: 20px;
+  height: 40px;
+}
+.fa {
+  color: white
+}
+
+
+
+/*animation of the home screen */ 
+
+
+  
+  @keyframes slideInFromBottom {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  .homegriditem1, .homegriditem2 {
+    animation: slideInFromBottom 1s;
+  }
+
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  .navcontainer {
+    animation: slideInFromLeft 1s;
+  }
+
+
+@media only screen and (max-width:1000px)
+{
+    .homegriditem1 h1 { 
+        position: static;
+    }
+    .homegriditem1 mark { 
+      font-size:30px; 
+
+    }
+    .homegriditem2 {
+      position: static;
+    }
+}
+

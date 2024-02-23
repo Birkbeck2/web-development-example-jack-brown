@@ -1,0 +1,138 @@
+
+/* css form styling */ 
+
+
+form {
+    font-family: abel;
+   
+    width:40vh;
+}
+input {
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.contactmegrid {
+    padding: 100px;
+    background-image: url(images/berries.jpg);
+    background-size: cover; 
+    grid-template-rows: 100%;
+
+}
+
+.formcontainer { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 175px; 
+
+
+}
+
+label { 
+    background: gray;
+    color: white;
+}
+
+/* styling of text box */ 
+
+
+.contactmetext {
+    text-align: center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    width: 250px;
+    background: gray;
+    z-index: 1;
+
+
+
+}
+.contactmegrid { 
+    display:grid; 
+    height: 800px;
+    grid-template-columns: 50% 50%;
+}
+
+@keyframes slideInFromBottom {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+.contactmegrid {
+    animation: slideInFromBottom 1s;
+  }
+
+  /* change of the view for different viewport sizes */ 
+
+@media only screen and (max-width: 900px) {
+    .contactmegrid  {
+    background-image: none;
+    grid-template-columns: 100%;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    }
+    .formcontainer { 
+        position: relative;
+        bottom: 400px;
+    }
+    .formcontainer{
+        background-color: grey;
+        padding-left: 40px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        border-radius: 10px;
+
+    }
+    input { 
+        height: 50%;
+        width: 100%;
+    }
+
+    .contactmetext {
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    bottom: 250px;
+    left: 20vh;
+} 
+
+}
+
+@media only screen and (max-width:600px) {
+    .contactmegrid {
+        padding: 0px;
+
+    }
+    form {
+        width: 25vh;
+    }
+    .contactmetext {
+        left: 15vh;
+    }
+
+}
+@media only screen and (max-width:400px) {
+    .contactmetext { 
+        left: 8vh;
+
+    }
+
+@media only screen and (max-width:450px) {
+        .contactmetext { 
+            left: 5vh;
+    
+        }
+}
+}
